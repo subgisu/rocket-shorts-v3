@@ -649,7 +649,8 @@
 
         /* Curriculum Section */
         .curriculum-section {
-            background: var(--white);
+            background: #0a0a0a;
+            color: #ffffff;
         }
 
         .curriculum-header {
@@ -675,14 +676,14 @@
             grid-template-columns: 100px 1fr;
             gap: 40px;
             padding: 48px 0;
-            border-bottom: 1px solid var(--gray-200);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             counter-increment: curriculum;
             transition: all 0.3s ease;
         }
 
         .curriculum-item:hover {
             padding-left: 24px;
-            background: var(--gray-100);
+            background: rgba(255,255,255,0.05);
             margin: 0 -24px;
             padding-right: 24px;
         }
@@ -699,10 +700,11 @@
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 8px;
+            color: #ffffff;
         }
 
         .curriculum-item p {
-            color: var(--gray-600);
+            color: rgba(255,255,255,0.7);
         }
 
         @media (max-width: 600px) {
