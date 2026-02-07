@@ -455,25 +455,22 @@
             position: relative;
         }
 
-      .solution-bg-img {
+   .solution-bg-img {
     position: absolute;
     right: -50px;
     bottom: -50px;
     width: 400px;
     height: auto;
-    opacity: 0.25;
+    opacity: 0.15;
     pointer-events: none;
     filter: blur(4px);
+    z-index: 0;
 }
 
-        @media (max-width: 768px) {
-            .solution-bg-img {
-                width: 250px;
-                right: -30px;
-                bottom: -30px;
-            }
-        }
-
+.solution-text {
+    position: relative;
+    z-index: 2;
+}
         .solution-card h3 {
             font-size: clamp(28px, 4vw, 36px);
             font-weight: 800;
