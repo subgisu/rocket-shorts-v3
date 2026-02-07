@@ -452,35 +452,29 @@
             color: var(--white);
             padding: 60px;
             overflow: hidden;
+            position: relative;
         }
 
-        .solution-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
+        .solution-bg-img {
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            width: 400px;
+            height: auto;
+            opacity: 0.15;
+            pointer-events: none;
         }
 
         .solution-text {
-            flex: 1;
-        }
-
-        .solution-img {
-            flex: 0 0 200px;
-        }
-
-        .solution-img img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
+            position: relative;
+            z-index: 1;
         }
 
         @media (max-width: 768px) {
-            .solution-content {
-                flex-direction: column;
-            }
-            .solution-img {
-                flex: 0 0 auto;
-                width: 150px;
+            .solution-bg-img {
+                width: 250px;
+                right: -30px;
+                bottom: -30px;
             }
         }
 
@@ -1124,19 +1118,15 @@
                 </div>
                 
                 <div class="solution-card reveal">
-                    <div class="solution-content">
-                        <div class="solution-text">
-                            <h3>쇼츠 수익,<br>이렇게 바뀝니다</h3>
-                            <p>
-                                쇼츠 → 쿠팡파트너스 → 쿠팡 로켓그로스<br><br>
-                                한 영상으로 <strong>2중 수익</strong>이 찍히는 구조를 처음부터 끝까지 알려드립니다.<br><br>
-                                같은 영상, 같은 노출<br>
-                                그런데 수익은 두 갈래.
-                            </p>
-                        </div>
-                        <div class="solution-img">
-                            <img src="coins.png" alt="수익 이미지">
-                        </div>
+                    <img src="coins.png" alt="" class="solution-bg-img">
+                    <div class="solution-text">
+                        <h3>쇼츠 수익,<br>이렇게 바뀝니다</h3>
+                        <p>
+                            쇼츠 → 쿠팡파트너스 → 쿠팡 로켓그로스<br><br>
+                            한 영상으로 <strong>2중 수익</strong>이 찍히는 구조를 처음부터 끝까지 알려드립니다.<br><br>
+                            같은 영상, 같은 노출<br>
+                            그런데 수익은 두 갈래.
+                        </p>
                     </div>
                 </div>
             </div>
