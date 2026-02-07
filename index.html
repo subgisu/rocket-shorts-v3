@@ -887,47 +887,29 @@
             line-height: 1.8;
         }
 
-        .schedule-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
         .schedule-card {
-            background: var(--gray-100);
-            padding: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
+    background: var(--black);
+    color: var(--white);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
 
-        .schedule-card:hover {
-            background: var(--black);
-            color: var(--white);
-        }
+.schedule-card:hover {
+    background: var(--white);
+    color: var(--black);
+}
 
-        .schedule-card .badge {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--accent);
-            letter-spacing: 1px;
-        }
+.schedule-card .time {
+    font-size: 24px;
+    color: var(--gray-400);
+}
 
-        .schedule-card .date {
-            font-size: 34px;
-            font-weight: 800;
-        }
-
-        .schedule-card .time {
-            font-size: 24px;
-            color: var(--gray-600);
-        }
-
-        .schedule-card:hover .time {
-            color: var(--gray-400);
-        }
-
+.schedule-card:hover .time {
+    color: var(--gray-600);
+}
         /* Final CTA */
         .final-cta {
             background: var(--accent);
