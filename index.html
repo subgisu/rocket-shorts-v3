@@ -398,6 +398,14 @@
             margin: 0 auto;
         }
 
+        .results-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
         .result-card {
             background: white;
             border-radius: 16px;
@@ -415,6 +423,25 @@
             font-size: 14px;
             color: #555;
             text-align: center;
+        }
+
+        .result-card-new {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .result-card-new:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .result-card-new img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Curriculum */
@@ -557,7 +584,8 @@
                 height: 280px;
             }
 
-            .results-grid {
+            .results-grid,
+            .results-grid-4 {
                 grid-template-columns: 1fr;
             }
 
@@ -758,18 +786,18 @@
             <h2>실제 매출 인증</h2>
             <p class="section-desc">제대로 배우면 누구나 가능합니다</p>
 
-            <div class="results-grid">
-                <div class="result-card">
-                    <img src="KakaoTalk_20260201_011840024.png" alt="매출 인증">
-                    <p>A사업자 1개 상품 월매출 1,570만원<br>B사업자 2개 상품 월매출 3,000만원</p>
+            <div class="results-grid-4">
+                <div class="result-card-new">
+                    <img src="KakaoTalk_20260207_164956002.png" alt="쿠팡 판매수익">
                 </div>
-                <div class="result-card">
-                    <img src="KakaoTalk_20260201_011803202_02.png" alt="구매 금액">
-                    <p>실제 수강생 구매/취소/합산 금액 내역</p>
+                <div class="result-card-new">
+                    <img src="KakaoTalk_20260207_164828296.png" alt="쿠팡파트너스 매출 수익">
                 </div>
-                <div class="result-card">
-                    <img src="KakaoTalk_20260201_011803202_03.png" alt="합산 금액">
-                    <p>합산 금액 ₩81,374,695</p>
+                <div class="result-card-new">
+                    <img src="KakaoTalk_20260207_164835014.png" alt="유튜브 제휴 수익">
+                </div>
+                <div class="result-card-new">
+                    <img src="KakaoTalk_20260207_164842031.png" alt="네이버 스마트스토어 수익">
                 </div>
             </div>
         </div>
