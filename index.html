@@ -451,6 +451,37 @@
             background: var(--black);
             color: var(--white);
             padding: 60px;
+            overflow: hidden;
+        }
+
+        .solution-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .solution-text {
+            flex: 1;
+        }
+
+        .solution-img {
+            flex: 0 0 200px;
+        }
+
+        .solution-img img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .solution-content {
+                flex-direction: column;
+            }
+            .solution-img {
+                flex: 0 0 auto;
+                width: 150px;
+            }
         }
 
         .solution-card h3 {
@@ -471,7 +502,7 @@
 
         /* Structure Section */
         .structure-section {
-            background: var(--black);
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
             color: var(--white);
         }
 
@@ -490,46 +521,65 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 30px;
             flex-wrap: wrap;
             margin-bottom: 100px;
         }
 
         .flow-step {
             text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 77, 0, 0.3);
+            border-radius: 20px;
+            padding: 40px 50px;
+            transition: all 0.3s ease;
+        }
+
+        .flow-step:hover {
+            background: rgba(255, 77, 0, 0.1);
+            border-color: var(--accent);
+            transform: translateY(-5px);
         }
 
         .flow-step .num {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--accent);
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 16px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .flow-step h4 {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #FF6B2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .flow-step p {
             color: var(--gray-400);
             font-size: 14px;
-            margin-top: 8px;
+            margin-top: 12px;
         }
 
         .flow-arrow {
-            font-size: 32px;
+            font-size: 36px;
             color: var(--accent);
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
             .flow-visual {
                 flex-direction: column;
-                gap: 32px;
+                gap: 20px;
             }
             .flow-arrow {
                 transform: rotate(90deg);
+            }
+            .flow-step {
+                padding: 30px 40px;
             }
         }
 
@@ -548,25 +598,31 @@
         }
 
         .profit-card {
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 2px solid rgba(255, 77, 0, 0.4);
+            border-left: 5px solid var(--accent);
             padding: 48px;
-            text-align: center;
+            text-align: left;
             transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
         }
 
         .profit-card:hover {
             border-color: var(--accent);
-            background: rgba(255,77,0,0.05);
+            background: rgba(255,77,0,0.1);
+            transform: translateY(-5px);
         }
 
         .profit-card h4 {
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: 800;
             margin-bottom: 12px;
+            color: var(--white);
         }
 
         .profit-card p {
             color: var(--gray-400);
-            font-size: 15px;
+            font-size: 16px;
         }
 
         /* Instructor Section */
@@ -1068,13 +1124,20 @@
                 </div>
                 
                 <div class="solution-card reveal">
-                    <h3>쇼츠 수익,<br>이렇게 바뀝니다</h3>
-                    <p>
-                        쇼츠 → 쿠팡파트너스 → 쿠팡 로켓그로스<br><br>
-                        한 영상으로 <strong>2중 수익</strong>이 찍히는 구조를 처음부터 끝까지 알려드립니다.<br><br>
-                        같은 영상, 같은 노출<br>
-                        그런데 수익은 두 갈래.
-                    </p>
+                    <div class="solution-content">
+                        <div class="solution-text">
+                            <h3>쇼츠 수익,<br>이렇게 바뀝니다</h3>
+                            <p>
+                                쇼츠 → 쿠팡파트너스 → 쿠팡 로켓그로스<br><br>
+                                한 영상으로 <strong>2중 수익</strong>이 찍히는 구조를 처음부터 끝까지 알려드립니다.<br><br>
+                                같은 영상, 같은 노출<br>
+                                그런데 수익은 두 갈래.
+                            </p>
+                        </div>
+                        <div class="solution-img">
+                            <img src="coins.png" alt="수익 이미지">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
