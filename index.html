@@ -495,16 +495,16 @@
         /* Instructor Section */
         .instructor-section {
             background: var(--white);
-            padding: 0;
+            padding: 160px 0;
         }
 
         .instructor-header {
-            padding: 160px 0 80px;
+            padding: 0 0 80px;
         }
 
         @media (max-width: 768px) {
             .instructor-header {
-                padding: 100px 0 60px;
+                padding: 0 0 60px;
             }
         }
 
@@ -514,7 +514,10 @@
 
         .instructor-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         @media (max-width: 900px) {
@@ -524,44 +527,37 @@
         }
 
         .instructor-card {
-            position: relative;
+            background: var(--white);
+            border-radius: 16px;
             overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .instructor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
         }
 
         .instructor-card img {
             width: 100%;
-            height: 600px;
+            height: 340px;
             object-fit: cover;
+            object-position: center top;
             display: block;
-            filter: grayscale(20%);
-            transition: all 0.6s ease;
-        }
-
-        .instructor-card:first-child img {
-            object-position: center 20%;
-        }
-
-        .instructor-card:last-child img {
-            object-position: center 30%;
+            transition: all 0.5s ease;
         }
 
         .instructor-card:hover img {
-            filter: grayscale(0%);
             transform: scale(1.03);
         }
 
         .instructor-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 48px;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-            color: var(--white);
+            padding: 28px 32px 36px;
         }
 
         .instructor-info h3 {
-            font-size: 32px;
+            font-size: 26px;
             font-weight: 800;
             margin-bottom: 8px;
         }
@@ -575,14 +571,14 @@
         }
 
         .instructor-info p {
-            color: var(--gray-400);
+            color: var(--gray-600);
             font-size: 15px;
             line-height: 1.7;
         }
 
         @media (max-width: 768px) {
             .instructor-card img {
-                height: 500px;
+                height: 280px;
             }
         }
 
@@ -1036,24 +1032,24 @@
                 <h2 class="headline">나이는 숫자에 불과</h2>
                 <p class="body-lg" style="color: var(--gray-600); margin-top: 16px;">40대 50대 강사들의 실전 강의<br>이론 말고, 실제 해본 사람의 구조만 알려드립니다</p>
             </div>
-        </div>
-        
-        <div class="instructor-grid">
-            <div class="instructor-card reveal">
-                <img src="KakaoTalk_20260201_011740344.jpg" alt="월천댁">
-                <div class="instructor-info">
-                    <h3>월천댁</h3>
-                    <p class="role">쿠팡 전문 강사</p>
-                    <p>잘팔리는 상품 소싱방법<br>쇼츠 + 쿠팡 로켓그로스 연결로 마진 극대화</p>
-                </div>
-            </div>
             
-            <div class="instructor-card reveal">
-                <img src="KakaoTalk_20260201_011740344_01.jpg" alt="세지쌤">
-                <div class="instructor-info">
-                    <h3>세지쌤</h3>
-                    <p class="role">쇼핑쇼츠 전문강사</p>
-                    <p>터지는 쇼핑쇼츠 영상 제작 노하우<br>쿠팡파트너스 + 유튜브 제휴수익 + 토스쇼핑 쉐어</p>
+            <div class="instructor-grid">
+                <div class="instructor-card reveal">
+                    <img src="KakaoTalk_20260201_011740344.jpg" alt="월천댁">
+                    <div class="instructor-info">
+                        <h3>월천댁</h3>
+                        <p class="role">쿠팡 전문 강사</p>
+                        <p>잘팔리는 상품 소싱방법<br>쇼츠 + 쿠팡 로켓그로스 연결로 마진 극대화</p>
+                    </div>
+                </div>
+                
+                <div class="instructor-card reveal">
+                    <img src="KakaoTalk_20260201_011740344_01.jpg" alt="세지쌤">
+                    <div class="instructor-info">
+                        <h3>세지쌤</h3>
+                        <p class="role">쇼핑쇼츠 전문강사</p>
+                        <p>터지는 쇼핑쇼츠 영상 제작 노하우<br>쿠팡파트너스 + 유튜브 제휴수익 + 토스쇼핑 쉐어</p>
+                    </div>
                 </div>
             </div>
         </div>
